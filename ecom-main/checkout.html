@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Fashion Forward</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">Fashion Forward</a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html" class="cart-link">
+                            Cart (<span id="cart-count">0</span>)
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Checkout Page -->
+    <main class="checkout-page">
+        <div class="container">
+            <h1>Checkout</h1>
+            
+            <div class="checkout-content">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <form id="checkout-form">
+                        <div class="form-section">
+                            <h2>Contact Information</h2>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Shipping Address</h2>
+                            <div class="form-row">
+                                <input type="text" name="firstName" placeholder="First Name" required>
+                                <input type="text" name="lastName" placeholder="Last Name" required>
+                            </div>
+                            <input type="text" name="address" placeholder="Address" required>
+                            <div class="form-row">
+                                <input type="text" name="city" placeholder="City" required>
+                                <input type="text" name="state" placeholder="State" required>
+                                <input type="text" name="zipCode" placeholder="ZIP Code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Payment Information</h2>
+                            <input type="text" name="cardNumber" placeholder="Card Number" required>
+                            <div class="form-row">
+                                <input type="text" name="expiryDate" placeholder="MM/YY" required>
+                                <input type="text" name="cvv" placeholder="CVV" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Place Order</button>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="order-items">
+                        <!-- Order items will be loaded here -->
+                    </div>
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax</span>
+                            <span id="tax">₹0.00</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Total</span>
+                            <span id="total">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fashion Forward</h3>
+                    <p>Your premier destination for the latest fashion trends and timeless classics.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fashion Forward. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
